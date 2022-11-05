@@ -4,14 +4,14 @@ from datetime import datetime
 
 class SimpleReport:
     @classmethod
-    def close_date(cls, list):
+    def old_date(cls, list):
         return min(
             datetime.fromisoformat(item["data_de_fabricacao"]).date()
             for item in list
         )
 
     @classmethod
-    def old_date(cls, list):
+    def close_date(cls, list):
         return min(
             datetime.fromisoformat(item["data_de_validade"]).date()
             for item in list
